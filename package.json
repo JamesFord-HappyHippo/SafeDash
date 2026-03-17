@@ -1,0 +1,36 @@
+{
+  "name": "safedash",
+  "version": "1.0.0",
+  "description": "A security-hardened JavaScript utility library — lodash rebuilt with zero CVEs",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": {
+      "import": "./src/*.ts",
+      "types": "./src/*.ts"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test tests/**/*.test.js",
+    "lint": "tsc --noEmit",
+    "scan": "node ../AEGIS/src/index.js run . --phase1 --no-db --fail-on=medium"
+  },
+  "keywords": ["utility", "lodash", "security", "safe", "typed"],
+  "author": "Pareidolia LLC (d/b/a Equilateral AI)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
