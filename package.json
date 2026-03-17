@@ -20,9 +20,11 @@
   "files": ["dist", "src"],
   "scripts": {
     "build": "tsc",
-    "test": "node --test tests/**/*.test.js",
+    "test": "node --test tests/**/*.test.cjs",
+    "test:security": "node --test tests/object/object.test.cjs",
     "lint": "tsc --noEmit",
-    "scan": "node ../AEGIS/src/index.js run . --phase1 --no-db --fail-on=medium"
+    "prepublishOnly": "npm run lint && npm run build && npm test",
+    "scan": "node ../AEGIS/src/index.js run . --phase1 --no-db --fail-on=medium --scan-secrets"
   },
   "keywords": ["utility", "lodash", "security", "safe", "typed"],
   "author": "Pareidolia LLC (d/b/a Equilateral AI)",

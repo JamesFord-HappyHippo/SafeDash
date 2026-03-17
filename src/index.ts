@@ -20,6 +20,16 @@ export { flatten, flattenDeep } from './array/flatten.js';
 export { uniq, uniqBy } from './array/uniq.js';
 export { difference, intersection } from './array/difference.js';
 export { zip, unzip } from './array/zip.js';
+export { head, first } from './array/head.js';
+export { last } from './array/last.js';
+export { tail, initial } from './array/tail.js';
+export { take, takeRight } from './array/take.js';
+export { drop, dropRight } from './array/drop.js';
+export { without } from './array/without.js';
+export { pull, pullAll } from './array/pull.js';
+export { findIndex, findLastIndex } from './array/findIndex.js';
+export { shuffle } from './array/shuffle.js';
+export { sample, sampleSize } from './array/sample.js';
 
 // Object
 export { get } from './object/get.js';
@@ -28,6 +38,9 @@ export { merge } from './object/merge.js';
 export { pick, omit } from './object/pick.js';
 export { cloneDeep } from './object/cloneDeep.js';
 export { defaults, defaultsDeep } from './object/defaults.js';
+export { has } from './object/has.js';
+export { assign } from './object/assign.js';
+export { keys, values, entries, mapKeys, mapValues, invert } from './object/keys.js';
 
 // String
 export { camelCase } from './string/camelCase.js';
